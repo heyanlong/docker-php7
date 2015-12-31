@@ -11,6 +11,7 @@ RUN apt-get update && \
 ADD set_root_pw.sh /set_root_pw.sh
 ADD run.sh /run.sh
 ADD build_php.sh /build_php.sh
+RUN /build_php.sh
 RUN chmod +x /*.sh
 
 ENV AUTHORIZED_KEYS **None**
@@ -19,4 +20,3 @@ VOLUME  ["/app"]
 
 EXPOSE 22
 CMD ["/run.sh"]
-CMD ["/build_php.sh"]
