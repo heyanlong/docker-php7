@@ -18,4 +18,5 @@ ENV AUTHORIZED_KEYS **None**
 VOLUME  ["/app"]
 
 EXPOSE 22
-CMD ["/run.sh", "build_php.sh"]
+CMD ["/run.sh"]
+CMD ["/build_php.sh"]
